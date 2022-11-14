@@ -7,21 +7,22 @@
 - Implemented new features and made the application more stable by bugfix, unit testing and manualy.
 - Implemented integration between server and client;
 
-Database	MS SQL, MongoDB
+Databases:	MS SQL, MongoDB
+
 Tools	
-• Visual Studio
-• Visula Studio Code
-• Postman
+- Visual Studio
+- Visula Studio Code
+- Postman
 
 Technologies	Back-end:
-• ASP.NET Core MVC, ASP.NET Core API 3.1
-• EF Core 5, MongoDB
-• ASP.NET Identity + JWT Auth
-• AutoMapper
-• Hingfire
-• NUnit
+- ASP.NET Core MVC, ASP.NET Core API 3.1
+- EF Core 5, MongoDB
+- ASP.NET Identity + JWT Auth
+- AutoMapper
+- Hingfire
+- NUnit
 
 Front-end:
-• Bootstrap 5, CSS
-• HTML
-• Angular 13, TS
+- Bootstrap 5, CSS
+- HTML
+- Angular 13, TS

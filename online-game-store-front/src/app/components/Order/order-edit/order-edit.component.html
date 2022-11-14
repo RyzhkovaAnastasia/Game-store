@@ -1,0 +1,65 @@
+<div class="mx-auto my-5 w-75">
+    <p class="text-center fw-bold">{{'Labels.Order.Edit order' | translate }} #{{order.id}}</p>
+    <hr />
+
+    <form class="form">
+      <div class="form-group mb-4">
+        <p>{{ 'Labels.Order.Select Order State' | translate }}</p>
+        <select class="form-select form-select-sm" [(ngModel)]="order.orderState" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="orderState.Shipped">{{ 'Labels.OrderState.Shipped' | translate}}</option>
+            <option [ngValue]="orderState.Complete">{{ 'Labels.OrderState.Complete' | translate }}</option>
+            <option [ngValue]="orderState.Canceled">{{ 'Labels.OrderState.Canceled' | translate }}</option>
+          </select>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">{{ 'Labels.Order.Delivery.Name' | translate }}</span>
+      <input type="text" name="name" id="name" class="form-control me-4" [(ngModel)]="order.shipName"/>
+    </div>
+    
+        <div class="input-group mb-3">
+            <span class="input-group-text">{{ 'Labels.Order.Delivery.Country' | translate }}</span>
+          <input type="text" name="country" id="country" class="form-control me-4" [(ngModel)]="order.shipCountry"/>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">{{ 'Labels.Order.Delivery.Region' | translate }}</span>
+            <input type="text" name="region" id="region" class="form-control me-4" [(ngModel)]="order.shipRegion"/>
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">{{ 'Labels.Order.Delivery.City' | translate }}</span>
+            <input type="text" name="city" id="city" class="form-control me-4" [(ngModel)]="order.shipCity"/>
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">{{ 'Labels.Order.Delivery.Postal code' | translate }}</span>
+            <input type="text" name="code" id="code" class="form-control me-4" [(ngModel)]="order.shipPostalCode">
+            </div>
+            <div class="input-group mb-3">
+            <span class="input-group-text">{{ 'Labels.Order.Delivery.Address' | translate }}</span>
+            <input type="text" name="address" id="address" class="form-control me-4" [(ngModel)]="order.shipAddress" />
+          </div>
+          <table class="table" *ngIf="order.items.length > 0">
+            <thead>
+                <tr>
+                  <th scope="col">{{ 'Labels.Game.Name' | translate }}</th>
+                  <th scope="col">{{ 'Labels.Game.Price' | translate }} $</th>
+                  <th scope="col">{{ 'Labels.Game.Quantity' | translate }}</th>
+                  <th scope="col">{{ 'Labels.Game.Discount' | translate }} %</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+            <tr *ngFor="let item of order.items">
+                <td>{{item.game?.name}}</td>
+                <td>{{item.price}}</td>
+                <td><input type="text" class="form-control" [(ngModel)]="item.quantity" [ngModelOptions]="{standalone: true}" /></td>
+                <td><input type="text" class="form-control" [(ngModel)]="item.discount" [ngModelOptions]="{standalone: true}" /></td>
+                <td> <button class="btn btn-sm text-danger" (click)="deleteItem(item.id)"><fa-icon [icon]="faTrash"></fa-icon></button> </td>
+            </tr>
+        </tbody>
+          </table>
+      <button type="submit" (click)="editOrder()" class="btn btn-success m-3">{{ 'Labels.Submit' | translate }}</button>
+    </form>
+  </div>

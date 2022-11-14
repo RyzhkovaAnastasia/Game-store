@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <app-games-filter [filter]="gameFilterComponents.filter" (passFilterToParent)="filterBuilder($event)"></app-games-filter>
+    </div>
+    <div class="col">
+      <app-games-sort [sort]="gameFilterComponents.sort" (passSortToParent)="sortBuilder($event)"></app-games-sort>
+      <div class="container" *ngIf="games.length <= 0">
+        <h3 class="text-center fw-light my-5"> {{ 'Labels.Game.No games in stock' | translate }} </h3>
+      </div>
+      <div class="container" *ngIf="games.length > 0">
+      <div class="row card-deck d-flex justify-content-center">
+        <div class="col-md-6 my-3" *ngFor="let game of games">
+          <div class="card">
+            <div class="card-header text-center">
+              <a class="text-decoration-none text-dark fw-bold" (click)="detailsGame(game.key)">{{game.name | uppercase}}</a>
+              <span *ngIf="game.discount !== 0" class="badge bg-success rounded-pill mx-2">{{game.discount}}%</span>
+            </div>
+
+            <div class="card-body">
+              <p class="fw-light">{{game.description}}</p>
+              <p *ngIf="game.discount === 0" class="text-dark my-2">{{ 'Labels.Game.Price' | translate }}: {{game.price}}$ </p>
+
+              <div *ngIf="game.discount !== 0" class="my-2">
+                Price:
+                <span class="fw-light text-decoration-line-through">
+                  {{ game.price }}$
+                </span>
+                <span class="text-success">
+                  {{ getWithDiscount(game.price, game.discount) }}$
+                </span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <button class="btn text-primary" (click)="detailsGame(game.key)">
+                <fa-icon [icon]="faMagnifier"></fa-icon>
+              </button>
+              <button class="btn text-warning"
+              *ngIf="isInRole || user.publisherId === game.publisher?.id" 
+               (click)="editGame(game.key)">
+                <fa-icon [icon]="faPencil"></fa-icon>
+              </button>
+              <button class="btn text-danger"
+              *ngIf="isInRole" 
+              (click)="deleteGame(game.id)">
+                <fa-icon [icon]="faTrash"></fa-icon>
+              </button>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <app-games-pagination [gameNumber]="gameNumber" [pagination]="gameFilterComponents.pagination" (passPaginationToParent)="paginationBuilder($event)"></app-games-pagination>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

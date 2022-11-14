@@ -1,0 +1,70 @@
+<div class="m-3 d-flex justify-content-center">
+  <ul class="col-md-8 list-group list-group-flush">
+    <li class="list-group-item">
+      <div class="ms-3">
+        <div class="fs-5 fw-bold text-center">{{game.name | uppercase}}</div>
+        <div *ngIf="game.discontinued" class="fw-light text-center text-danger">{{'Labels.Game.Discontinued' | translate }}</div>
+        <p class="fw-light">{{game.description}}</p>
+        <div *ngIf="game.discount === 0" class="mb-2">
+          <span  class="text-primary fw-light">
+            Price : 
+          </span> 
+            <span>{{game.price}}$</span>
+        </div>
+        <div *ngIf="game.discount !== 0" class="mb-2">
+          <span class="fw-light text-primary">{{ 'Labels.Game.Price' | translate }} : </span>
+          <span class="fw-light text-decoration-line-through">
+            {{game.price}}$
+          </span>
+          <span class="text-success">
+            {{ getWithDiscount(game.price, game.discount) }}$
+          </span>
+          <span class="text-success fw-bold mx-3">
+            ({{ game.discount }}%)
+          </span>
+        </div>
+
+        <div class="mb-2" >
+          <span class="fw-light text-primary">{{'Labels.Publisher.Publisher' | translate }} : </span> 
+          <span *ngIf="game.publisher !== null"> {{game.publisher.companyName}} </span>
+          <span class="fw-light text-secondary" *ngIf="game.publisher === null"> {{'Labels.Publisher.Unknown' | translate }} </span>
+        </div>
+        
+        <div class="mb-2" *ngIf="game.platformTypes.length > 0">
+          <span class="fw-light text-primary">{{'Labels.Platform.Platforms' | translate }} : </span> 
+          
+          <span *ngFor="let platform of game.platformTypes"
+            class="me-2">
+            {{platform.type}} </span>
+        </div>
+
+        <div class="mb-2" *ngIf="game.genres.length > 0">
+          <span class="fw-light text-primary">{{'Labels.Genre.Genres' | translate }} : </span> <span *ngFor="let genre of game.genres" class="me-2">
+            {{genre.name}}
+          </span>
+        </div>
+
+        <div class="mb-2" *ngIf="game.genres.length <= 0">
+          <span class="fw-light text-primary">{{'Labels.Genre.Genres' | translate }} : </span> 
+          <span class="me-2 fw-light text-secondary"> {{'Labels.Genre.Other' | translate }} </span>
+        </div>
+
+        <div class="my-5 input-group d-flex justify-content-center">
+
+          <div class="mx-3" *ngIf="game.isCommented">
+            <button class="btn text-secondary" (click)="openGameComments()">{{ 'Labels.Game.Go to comments' | translate }}</button>
+           </div>
+
+        <div class="mx-3" *ngIf="game.unitsInStock !== 0">
+         <button class="btn btn-success" (click)="addGameToBasket()">{{ 'Labels.Order.Add to basket' | translate }}</button>
+        </div>
+
+        <div class="mx-3" *ngIf="game.isDownloaded">
+          <button class="btn btn-secondary" (click)="downloadGame()">{{ 'Labels.Game.Download' | translate }}</button>
+         </div>
+      </div>
+
+      </div>
+    </li>
+  </ul>
+</div>

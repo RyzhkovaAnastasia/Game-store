@@ -1,0 +1,24 @@
+<div class="my-3 d-flex justify-content-center">
+  <form [formGroup]="iboxForm" class="form w-25">
+    <div class="form-group mb-3">
+      <label for="accountNumber">{{'Labels.Order.Payment.IBox.Account number' | translate}}</label>
+      <input type="text" class="form-control" formControlName="accountNumber" id="accountNumber"
+        [class.is-invalid]="iboxForm.controls['accountNumber'].invalid && iboxForm.controls['accountNumber'].touched" />
+      <small *ngIf="iboxForm.controls['accountNumber'].invalid &&
+        iboxForm.controls['accountNumber'].touched" class="text-danger">{{ 'Labels.Order.Payment.IBox.Errors.Account number is required' | translate}}</small>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="invoiceNumber"> {{'Labels.Order.Payment.IBox.Invoice number' | translate}}</label>
+      <input type="text" class="form-control" formControlName="invoiceNumber" id="invoiceNumber" 
+      [class.is-invalid]="iboxForm.controls['invoiceNumber'].invalid && iboxForm.controls['invoiceNumber'].touched"/>
+      <small *ngIf="iboxForm.controls['invoiceNumber'].invalid &&
+      iboxForm.controls['invoiceNumber'].touched" class="text-danger">{{ 'Labels.Order.Payment.IBox.Errors.Invoice number is required' | translate}}</small>
+    </div>
+
+    <div class="mb-3">
+      <p>{{'Labels.Order.Total amount' | translate}} : {{ getTotal() }}$</p>
+    </div>
+    <button class="btn btn-primary" (click)="pay(); clicked = true" [disabled]="clicked">{{'Labels.Order.Payment.Pay' | translate}}</button>
+  </form>
+</div>

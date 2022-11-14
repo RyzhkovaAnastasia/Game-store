@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="GrapeCity.Documents.Word" Version="5.1.0.791" />
+    <PackageReference Include="Hangfire" Version="1.7.28" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.28" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineGameStore.Common\OnlineGameStore.Common.csproj" />
+    <ProjectReference Include="..\OnlineGameStore.DAL\OnlineGameStore.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

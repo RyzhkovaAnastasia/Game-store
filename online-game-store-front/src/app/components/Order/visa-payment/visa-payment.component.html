@@ -1,0 +1,40 @@
+<div class="my-3 d-flex justify-content-center">
+  <form [formGroup]="visaForm" class="form w-25">
+    <div class="form-group mb-3">
+      <label for="name"> {{'Labels.Order.Payment.Visa.Name' | translate}} </label>
+      <input type="text" class="form-control" formControlName="name" id="name"
+      [class.is-invalid]="visaForm.controls['name'].invalid && visaForm.controls['name'].touched" placeholder="Ivanov Ivan"/>
+      <small class="text-danger" *ngIf="visaForm.controls['name'].errors?.['required'] && visaForm.controls['name'].touched">{{'Labels.Order.Payment.Visa.Errors.Name is required' | translate}}</small>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="cardNumber"> {{'Labels.Order.Payment.Visa.Card number' | translate}}</label>
+      <input type="text" class="form-control" formControlName="cardNumber" id="cardNumber" placeholder="4***************"
+      [class.is-invalid]="visaForm.controls['cardNumber'].invalid && visaForm.controls['cardNumber'].touched"/>
+      <small class="text-danger" *ngIf="visaForm.controls['cardNumber'].errors?.['required'] && visaForm.controls['cardNumber'].touched">{{'Labels.Order.Payment.Visa.Errors.Card number is required' | translate}}</small>
+      <small class="text-danger" *ngIf="visaForm.controls['cardNumber'].errors?.['pattern'] && visaForm.controls['cardNumber'].touched">{{'Labels.Order.Payment.Visa.Errors.Card number must be visa format' | translate}}</small>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="cvv2">CVV2</label>
+      <input type="password" class="form-control" formControlName="cvv2" id="cvv2" placeholder="***"
+      [class.is-invalid]="visaForm.controls['cvv2'].invalid && visaForm.controls['cvv2'].touched"/>
+      <small class="text-danger" *ngIf="visaForm.controls['cvv2'].errors?.['required'] && visaForm.controls['cvv2'].touched">{{'Labels.Order.Payment.Visa.Errors.CVV2 is required' | translate}}</small>
+      <small class="text-danger" *ngIf="(visaForm.controls['cvv2'].errors?.['minlength'] || visaForm.controls['cvv2'].errors?.['maxlength']) && visaForm.controls['cvv2'].touched">{{'Labels.Order.Payment.Visa.Errors.CVV2 must have 3 symbols' | translate}}</small>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="dateOfExpiry"> {{'Labels.Order.Payment.Visa.Expire date' | translate}}</label>
+      <input type="text" class="form-control" formControlName="dateOfExpiry" id="dateOfExpiry" placeholder="**/****"
+      [class.is-invalid]="visaForm.controls['dateOfExpiry'].invalid && visaForm.controls['dateOfExpiry'].touched"/>
+      <small class="text-danger" *ngIf="visaForm.controls['dateOfExpiry'].errors?.['required'] && visaForm.controls['dateOfExpiry'].touched">{{'Labels.Order.Payment.Visa.Errors.Date is required' | translate}}</small>
+      <small class="text-danger" *ngIf="visaForm.controls['dateOfExpiry'].errors?.['pattern'] && visaForm.controls['dateOfExpiry'].touched">{{'Labels.Order.Payment.Visa.Errors.Date must have format **/****' | translate}}</small>
+      <small class="text-danger" *ngIf="visaForm.controls['dateOfExpiry'].errors?.['validDateOfExpiry'] && visaForm.controls['dateOfExpiry'].touched">{{'Labels.Order.Payment.Visa.Errors.Card is outdated' | translate}}</small>
+    </div>
+
+    <div class="mb-3">
+      <p>{{'Labels.Order.Total amount' | translate}} : {{ getTotal() }}$</p>
+    </div>
+    <button class="btn btn-primary" (click)="pay(); clicked=true;">{{ 'Labels.Order.Payment.Pay' | translate }}</button>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="mx-auto my-5" style="width: 500px;">
+  <p class="text-center fw-bold">{{'Labels.Genre.Edit genre' | translate}}</p>
+  <hr />
+  <form class="form" [formGroup]="genreForm">
+    <label for="name" class="fw-light m-2">{{ 'Labels.Genre.Name' | translate}}</label>
+    <div class="form-group mb-4">
+      <input type="text" name="name" id="name" class="form-control" formControlName="name" 
+      [class.is-invalid]="genreForm.controls['name'].invalid && genreForm.controls['name'].touched"/>
+      <small class="text-danger" *ngIf="genreForm.controls['name'].invalid && genreForm.controls['name'].touched">
+        {{'Labels.Genre.Errors.Name is required' | translate}}</small>
+    </div>
+    <div class="input-group mb-4">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm" name="parentGenreId" formControlName="parentGenreId">
+        <option [ngValue]="null">{{'Labels.Genre.Select parent genre' | translate}}</option>
+        <option *ngFor="let g of genres" [value]="g.id">{{g.name}}</option>
+      </select>
+    </div>
+
+    <button type="submit" (click)="editGenre()" class="btn btn-success m-3">{{'Labels.Submit' | translate}}</button>
+  </form>
+</div>

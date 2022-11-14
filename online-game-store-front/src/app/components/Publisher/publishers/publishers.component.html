@@ -1,0 +1,16 @@
+<div class="m-3 d-flex justify-content-center">
+  <ul class="col-md-8 list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let publisher of publishers">
+      <div class="ms-3 d-flex justify-content-center">
+        <span class="fs-5 fw-bold">{{publisher.companyName | uppercase}}</span>
+          <button class="btn text-primary" (click)="detailsPublisher(publisher.companyName)"><fa-icon [icon]="faMagnifier"></fa-icon></button>
+          <button class="btn text-warning" 
+          *ngIf="user.publisherId === publisher.id || isInRole" 
+          (click)="editPublisher(publisher.companyName)"><fa-icon [icon]="faPencil"></fa-icon></button>
+          <button class="btn text-danger"
+          *ngIf="isInRole" 
+          (click) = "deletePublisher(publisher.id)"><fa-icon [icon]="faTrash"></fa-icon></button>
+      </div>
+    </li>
+  </ul>
+</div>

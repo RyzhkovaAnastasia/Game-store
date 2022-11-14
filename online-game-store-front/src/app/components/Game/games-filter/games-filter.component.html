@@ -1,0 +1,100 @@
+<div class="m-4 border rounded-3">
+<ul class="nav flex-column">
+  <li class="nav-item mt-4 mb-2 mx-5">
+    <div class="input-group">
+      <span class="input-group-text"><fa-icon [icon]="faSearch"></fa-icon></span>
+  <input class="form-control" type="text" id="name" placeholder="{{'Labels.Game.Name' | translate}}" [(ngModel)]="filter.name"/>
+</div>
+  </li>
+  <li class="nav-item my-2 mx-5">
+    <div class="form-group">
+      <div class="input-group">
+      <input class="form-control text-center" type="text" id="name" placeholder="0" [(ngModel)]="filter.minPrice"/>
+      <span class="input-group-text">$</span>
+      <span class="mx-2 btn" aria-disabled="true"> — </span>
+      <input class="form-control text-center" type="text" id="name" placeholder="1000" [(ngModel)]="filter.maxPrice"/>
+      <span class="input-group-text">$</span>
+    </div>
+    </div>
+  </li>
+  <li class="nav-item my-2 mx-5">
+    <p>{{ 'Labels.Genre.Genres' | translate }}</p>
+    <div class="overflow-auto" style="max-height: 120px;">
+        <tree-root #tree [nodes]="genres">
+          <ng-template #treeNodeTemplate let-node let-index="index">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" [id]="node.data.id" (click)="changeSelectedGenres(node.data)" [checked]="isGenreChecked(node.data.id)"/>
+              <label class="form-check-label">
+                {{node.data.name}}
+              </label>
+            </div>
+          </ng-template>
+        </tree-root>
+  </div>
+  </li>
+  <li class="nav-item my-2 mx-5">
+    <p>{{ 'Labels.Platform.Platforms' | translate }}</p>
+    <div class="overflow-auto" style="max-height: 120px;">
+    <div class="form-check" *ngFor="let platform of platforms">
+      <input class="form-check-input" type="checkbox" [id]="platform.id" (click)="changeSelectedPlatforms(platform)" [checked]="isPlatformChecked(platform.id)"/>
+      <label class="form-check-label" [for]="platform.id">
+        {{platform.type}}
+      </label>
+    </div>
+    </div>
+  </li>
+  <li class="nav-item my-2 mx-5">
+    <p>{{ 'Labels.Publisher.Publishers' | translate }}</p>
+    <div class="overflow-auto" style="max-height: 100px;">
+    <div class="form-check" *ngFor="let publisher of publishers">
+      <input class="form-check-input" type="checkbox" [id]="publisher.id" (click)="changeSelectedPublishers(publisher)" [checked]="isPublisherChecked(publisher.id)">
+      <label class="form-check-label" [for]="publisher.id">
+        {{publisher.companyName}}
+      </label>
+    </div>
+    </div>
+  </li>
+  <li class="nav-item my-2 mx-5">
+    <p>{{ 'Labels.Game.Published' | translate }}</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="allTime" checked [value]="0" [(ngModel)]="filter.published" />
+      <label class="form-check-label" for="allTime">
+        {{ 'Labels.Published.All time' | translate }}
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="lastWeek" [value]="7" [(ngModel)]="filter.published" />
+      <label class="form-check-label" for="lastWeek">
+        {{ 'Labels.Published.Last week' | translate }}
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="lastMonth" [value]="30" [(ngModel)]="filter.published" />
+      <label class="form-check-label" for="lastMonth">
+        {{ 'Labels.Published.Last month' | translate }}
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="lastYear" [value]="365" [(ngModel)]="filter.published" />
+      <label class="form-check-label" for="lastYear">
+        {{ 'Labels.Published.Last year' | translate }}
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="twoYears" [value]="365 * 2" [(ngModel)]="filter.published" />
+      <label class="form-check-label" for="twoYears">
+        2 {{ 'Labels.Published.N years' | translate }}
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="threeYears" [value]="365 * 3" [(ngModel)]="filter.published" />
+      <label class="form-check-label" for="threeYears">
+        3 {{ 'Labels.Published.N years' | translate }}
+      </label>
+    </div>
+  </li>
+</ul>
+  <div class="d-flex justify-content-center my-3">
+    <button class="btn btn-outline-primary" (click)="filterGames()">{{ 'Labels.Filter' | translate }}</button>
+  </div>
+</div>

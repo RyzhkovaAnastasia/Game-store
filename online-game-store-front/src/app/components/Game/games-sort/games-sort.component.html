@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg mt-4">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <button class="btn text-secondary" type="button" disabled>
+          {{ 'Labels.Game.Filter.Sort by' | translate }} : 
+        </button>
+        <button class="btn text-primary" type="button" (click)="click(GameSortMethod.MostPopular)">
+          <fa-icon [icon]="faPopular"></fa-icon> {{ 'Labels.Game.Filter.Most popular' | translate }} ↕
+        </button>
+        <button class="btn text-primary" type="button"  (click)="click(GameSortMethod.MostCommented)">
+          <fa-icon [icon]="faComment"></fa-icon> {{ 'Labels.Game.Filter.Most commented' | translate }} ↕
+        </button>
+        <button class="btn text-primary" type="button" (click)="click(GameSortMethod.Price)">
+          <fa-icon [icon]="faMoney"></fa-icon> {{ 'Labels.Game.Filter.Price' | translate }} ↕
+        </button>
+        <button class="btn text-primary" type="button" (click)="click(GameSortMethod.NewAdded)">
+          <fa-icon [icon]="faNewAdded"></fa-icon> {{ 'Labels.Game.Filter.New added' | translate }} ↕
+        </button>
+        <button class="btn text-secondary" type="button" (click)="click(GameSortMethod.None)">
+          {{ 'Labels.Reset' | translate }}
+        </button>
+      </div>
+    </div>
+    
+  </div>
+</nav>

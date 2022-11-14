@@ -1,0 +1,220 @@
+{
+  "Labels": {
+    "Language":{
+      "Choose interface language": "Выбирете язык интерфейса",
+      "English": "Английский",
+      "Russian": "Русский",
+      "Ukrainian": "Украинский"
+    },
+    "Auth": {
+      "Hi": "Привет",
+      "Email": "Электронная почта",
+      "Password": "Пароль",
+      "Role": "Роль",
+      "Login": "Войти",
+      "Sign In": "Войти",
+      "Sign Up": "Регестрация",
+      "Sign Out": "Выход",
+      "Username": "Имя пользователя",
+      "Create account": "Создать аккаунт",
+      "Don't have an account?": "Еще нет аккаунта?",
+      "Already have an account?": "Уже есть аккаунт?",
+      "Sign in later, enter Game Store": "Войти позже, зайти в Game Store",
+      "Sign up later, enter Game Store": "Зарегистрироваться позже, зайти в Game Store",
+      "Errors": {
+        "Email is required": "Электронная почта обязательна",
+        "Email is invalid": "Не валидная электронная почта",
+        "Email already exists": "Электронная почта уже зарегистрирована",
+        "Password must contain at least one number, one letter, one symbol and be 6 characters long": "В пароле должна быть хотя бы одна цифра, одна буква, один символ и быть больше или равным 6 символам",
+        "Password is required": "Пароль обязателен",
+        "Username is required": "Имя обязательно"
+      }
+    },
+    "Game": {
+      "Game": "Игра",
+      "Games": "Игры",
+      "Game info": "Информация про игру",
+      "Game store info": "Информация про игру для магазина",
+      "Create new game": "Создать новую игру",
+      "Edit game": "Редактировать игру",
+      "Name": "Название",
+      "Price": "Цена",
+      "Discount": "Скидка",
+      "Description": "Описание",
+      "Quantity": "Количество",
+      "Published": "Опубликована",
+      "Discontinued": "Снято с производства",
+      "Go to comments": "Перейти к комментариям",
+      "Download": "Скачать",
+      "Units in stock": "Количество",
+      "No games in stock": "Нет доступных игр",
+      "Filter": {
+        "Sort by": "Сортировать по",
+        "Most popular": "Популярности",
+        "Most commented": "Комментам",
+        "Price": "Цене",
+        "New added": "Добавлению"
+      },
+      "Errors":{
+        "Name is required": "Название обязательно",
+        "Key is required": "Поисковый ключ обязателен",
+        "Description is required": "Описание обязательно"
+      }
+
+    },
+    "Comment": {
+      "Comment": "Комментарий",
+      "Comments": "Комментарии",
+      "Reply": "ОТветить",
+      "Quote": "Процетировать",
+      "Delete": "Удалить",
+      "Ban": "Заблокировать",
+      "Create new comment": "Создать новый комментарий",
+      "Edit comment": "Редактировать комментарий",
+      "Comment was deleted": "Комментарий удален",
+      "Author name": "Имя автора",
+      "Errors": {
+        "Author name is required": "Имя автора обязательно",
+        "Comment is required": "Комментарий обязателен"
+      }
+    },
+    "Genre": {
+      "Genre": "Жанр",
+      "Genres": "Жанры",
+      "Create new genre": "Создать новый жанр",
+      "Edit genre": "Редактировать жанр",
+      "Select parent genre": "Выбрать родительский жанр",
+      "Select genres": "Выбрать жанры",
+      "Name": "Название",
+      "Other": "Другие",
+      "Errors": {
+        "Name is required": "Название обязательно"
+      }
+    },
+    "Publisher": {
+      "Publishers": "Производители",
+      "Publisher": "Производитель",
+      "Create new publisher": "Создать производителя",
+      "Edit publisher": "Редактировать производителя",
+      "Select publisher": "Выбрать производителя",
+      "Company name": "Названеи компании",
+      "Home page": "Домашняя страница",
+      "Description": "Описание",
+      "Unknown": "Неизвестно",
+      "Errors": {
+        "Company name is required": "Название компании обязательно",
+        "Home page is required": "Домашняя страница обязательна",
+        "Description is required": "Описание обязательно"
+      }
+    },
+    "Platform": {
+      "Platform": "Платформа",
+      "Platform type": "Тип платформы",
+      "Platforms": "Платформы",
+      "Create new platform": "Создать новую платформу",
+      "Edit platform": "Редактировать платформу",
+      "Platform name": "Название платформы",
+      "Select platforms": "Выбрать платформы",
+      "Errors": {
+        "Type is required": "Назва платформи обов'язковa"
+      }
+    },
+    "Order": {
+      "Edit order": "Редактировать заказ",
+      "Select Order State": "Выбрать статус заказа",
+      "Select date": "Выбрать дату",
+      "Orders": "Заказы",
+      "Order": "Заказать",
+      "Order(n)": "Заказ",
+      "Add to basket": "Добавить в корзину",
+      "Total amount": "Сумма",
+      "Orders history": "История",
+      "Your basket is empty": "Корзина пустая",
+      "Basket": "Корзина",
+      "Delivery": {
+        "Enter shipper info": "Введите информацию по доставке",
+        "Name": "Имя",
+        "Country": "Страна",
+        "Region": "Регион",
+        "City": "Город",
+        "Postal code": "Почтовый индекс",
+        "Address": "Адрес"
+      },
+      "Payment": {
+        "Please, choose payment method below": "Пожалуйста, выберите метод оплаты ниже",
+        "Pay": "Заплатить",
+        "Visa":{
+          "Name": "Имя",
+          "Card number": "Номер карты",
+          "Expire date": "Дата окончания карты",
+          "Errors":{
+            "Name is required": "Имя обязательно",
+            "CVV2 is required": "CVV2 обязателен",
+            "CVV2 must have 3 symbols": "CVV2 должен быть из 3-х символов",
+            "Card number is required": "Номер карты обязателен",
+            "Card number must be visa format": "Номер карты должен бцть в формате visa",
+            "Date is required": "Дата окончания карты обязательна",
+            "Date must have format **/****": "Дата окончания карты должна быть в формате **/****",
+            "Card is outdated": "Срок карты истек"
+          }
+        },
+        "IBox":{
+          "Account number": "Номер аккаунта",
+          "Invoice number": "Номер накладной",
+          "Errors":{
+            "Account number is required": "Номер аккаунта обязателен",
+            "Invoice number is required": "Номер накладной обязателен"
+          }
+        }
+      }
+    },
+    "Shipper": {
+      "Shippers": "Перевозчики"
+    },
+    "User": {
+      "Users": "Пользователи",
+      "Edit user": "радктировать пользователя",
+      "Edit profile": "Редактировать профиль",
+      "Ban user": "Заблокировать пользователя",
+      "Settings": "Настройки",
+      "Select ban duration": "Выбрать время блокировки"
+    },
+    "Role": {
+      "Roles": "Роли",
+      "Select role": "Выбрать роль"
+    },
+    "Submit": "Подтвердить",
+    "Search": "Искать",
+    "Filter": "Отфильтровать",
+    "Reset": "Очистить",
+    "Delete": "Удалить",
+    "Are you sure want to delete?": "Вы действительно хотите удалить?",
+    "Cancel": "Отменить",
+    "All": "Все",
+    "Items per page": "Количество на странице",
+    
+    "BanDuration":{
+      "One day": "Один день",
+      "One week": "Одна неделя",
+      "One month": "Один месяц",
+      "Permanent": "Навсегда"
+    },
+    "OrderState":{
+      "Shipped": "Отправлено",
+      "Complete": "Получено",
+      "Canceled": "Отменено"
+    },
+    "Published": {
+      "All time": "За все время",
+      "Last week": "За последнюю неделю",
+      "Last month": "за последнйи месяц",
+      "Last year": "за госледнйи год",
+      "1 year": "год",
+      "N years": "года"
+    }
+  },
+  "Errors": {
+    "Error": "Ошибка",
+    "You don't have enough permissions": "У вас недостаточно прав"
+  }
+}

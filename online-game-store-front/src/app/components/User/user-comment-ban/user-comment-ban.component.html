@@ -1,0 +1,14 @@
+<div class="my-5 d-flex justify-content-center">
+  <form>
+    <div class="form-group">
+      <label for="duration">{{ 'Labels.User.Select ban duration' | translate }}</label>
+      <select [(ngModel)]="commentBanDuration" name="duration" id="duration" class="form-control my-3">
+        <option [ngValue]="'OneDay'">{{ 'Labels.BanDuration.One day' | translate }}</option>
+        <option [ngValue]="'OneWeek'">{{ 'Labels.BanDuration.One week' | translate }}</option>
+        <option [ngValue]="'OneMonth'">{{ 'Labels.BanDuration.One month' | translate }}</option>
+        <option [ngValue]="'Permanent'">{{ 'Labels.BanDuration.Permanent' | translate }}</option>
+      </select>
+    </div>
+    <button (click)="banUser()" class="btn btn-danger">{{ 'Labels.User.Ban user' | translate }}</button>
+  </form>
+</div>

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGameStore", "OnlineGameStore\OnlineGameStore.csproj", "{598E1FE5-2CA9-4715-AA69-EF3BE6B4F820}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGameStore.BLL", "OnlineGameStore.BLL\OnlineGameStore.BLL.csproj", "{F34607DE-A86D-4715-A4F0-C7A31C2F10CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGameStore.DAL", "OnlineGameStore.DAL\OnlineGameStore.DAL.csproj", "{A72FC274-29F3-4093-B814-8FC151F27E93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGameStore.BLL.UnitTests", "OnlineGameStore.BLL.UnitTests\OnlineGameStore.BLL.UnitTests.csproj", "{ED5C64A5-295C-4B8E-8B45-40260EC189CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGameStore.DAL.UnitTests", "OnlineGameStore.DAL.UnitTests\OnlineGameStore.DAL.UnitTests.csproj", "{13B74B2F-F077-4A25-9572-B93DE5977D40}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGameStore.Common", "OnlineGameStore.Common\OnlineGameStore.Common.csproj", "{B99F29C9-82A2-4E78-BCB1-A8E0A2408F06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGameStore.API.UnitTests", "OnlineGameStore.API.UnitTests\OnlineGameStore.API.UnitTests.csproj", "{1EBB15CE-1B2F-49E9-A613-D25FB49E9863}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{598E1FE5-2CA9-4715-AA69-EF3BE6B4F820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{598E1FE5-2CA9-4715-AA69-EF3BE6B4F820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{598E1FE5-2CA9-4715-AA69-EF3BE6B4F820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{598E1FE5-2CA9-4715-AA69-EF3BE6B4F820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34607DE-A86D-4715-A4F0-C7A31C2F10CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34607DE-A86D-4715-A4F0-C7A31C2F10CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34607DE-A86D-4715-A4F0-C7A31C2F10CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34607DE-A86D-4715-A4F0-C7A31C2F10CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72FC274-29F3-4093-B814-8FC151F27E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72FC274-29F3-4093-B814-8FC151F27E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72FC274-29F3-4093-B814-8FC151F27E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72FC274-29F3-4093-B814-8FC151F27E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED5C64A5-295C-4B8E-8B45-40260EC189CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5C64A5-295C-4B8E-8B45-40260EC189CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5C64A5-295C-4B8E-8B45-40260EC189CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5C64A5-295C-4B8E-8B45-40260EC189CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B74B2F-F077-4A25-9572-B93DE5977D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B74B2F-F077-4A25-9572-B93DE5977D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B74B2F-F077-4A25-9572-B93DE5977D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B74B2F-F077-4A25-9572-B93DE5977D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99F29C9-82A2-4E78-BCB1-A8E0A2408F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99F29C9-82A2-4E78-BCB1-A8E0A2408F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99F29C9-82A2-4E78-BCB1-A8E0A2408F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99F29C9-82A2-4E78-BCB1-A8E0A2408F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBB15CE-1B2F-49E9-A613-D25FB49E9863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBB15CE-1B2F-49E9-A613-D25FB49E9863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBB15CE-1B2F-49E9-A613-D25FB49E9863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBB15CE-1B2F-49E9-A613-D25FB49E9863}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {025ADEA0-70FE-4C05-9CCA-5C101D618DEE}
+	EndGlobalSection
+EndGlobal

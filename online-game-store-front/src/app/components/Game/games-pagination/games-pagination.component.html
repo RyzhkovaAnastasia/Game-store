@@ -1,0 +1,49 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" (click)="clickPage(pagination.currentPage <= 0 ? 1 : pagination.currentPage - 1)">
+        Previous
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" (click)="clickPage(1)">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" aria-disabled>...</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" *ngIf="pagination.currentPage - 1 >= 1" (click)="clickPage(pagination.currentPage - 1)">
+        {{pagination.currentPage - 1}}
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" (click)="clickPage(pagination.currentPage <= 0 ? 1 : pagination.currentPage)"><span class="fw-bold">{{ pagination.currentPage }}</span></a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" *ngIf="pagination.currentPage + 1 <= maxPageNumber" (click)="clickPage(pagination.currentPage + 1)">
+        {{pagination.currentPage + 1}}
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" aria-disabled>...</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" (click)="clickPage(maxPageNumber)">{{maxPageNumber}}</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" (click)="clickPage(pagination.currentPage >= maxPageNumber ? pagination.currentPage : pagination.currentPage + 1)">Next</a>
+    </li>
+    <li class="page-item ms-3">
+      <p class="page-link">{{ 'Labels.Items per page' | translate }}: </p> 
+    </li>
+    <li>
+      <select class="page-link" name="itemsPerPage"  #itemsPerPage id="itemsPerPage" (change)="changeItemsPerPage(+itemsPerPage.value)">
+        <option [ngValue]="10" selected>10</option>
+        <option [ngValue]="20">20</option>
+        <option [ngValue]="50">50</option>
+        <option [ngValue]="100">100</option>
+        <option [value]="gameNumber">{{ 'Labels.All' | translate }}</option>
+      </select>
+    </li>
+  </ul>
+</nav>

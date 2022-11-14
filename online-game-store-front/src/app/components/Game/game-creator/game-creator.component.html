@@ -1,0 +1,103 @@
+<div class="mx-auto my-5" style="width: 700px;">
+  <form [formGroup]="gameForm">
+    <p class="text-center fw-bold">{{ 'Labels.Game.Create new game' | translate }}</p>
+    <hr />
+
+    <div>
+      <p class="text-secondary text-center">{{ 'Labels.Game.Game info' | translate }}</p>
+
+      <div class="form-group mb-4">
+        <input type="text" name="name" id="name" class="form-control me-4" (change)="onNameChange()" placeholder="{{ 'Labels.Game.Name' | translate }}"
+          formControlName="name"
+          [class.is-invalid]="gameForm.controls['name'].invalid && gameForm.controls['name'].touched" />
+        <small *ngIf="gameForm.controls['name'].errors?.['required'] && gameForm.controls['name'].touched"
+          class="text-danger">
+          {{ 'Labels.Game.Errors.Name is required' | translate }}
+        </small>
+      </div>
+
+      <div class="form-group mb-4">
+        <div class="input-group">
+          <span class="input-group-text">games/</span>
+          <input type="text" name="key" id="key" class="form-control" formControlName="key"
+            placeholder="game-key-example"
+            [class.is-invalid]="gameForm.controls['key'].invalid && gameForm.controls['key'].touched" />
+        </div>
+
+        <small *ngIf="gameForm.controls['key'].errors?.['required'] && gameForm.controls['key'].touched"
+          class="text-danger">
+          {{ 'Labels.Game.Errors.Key is required' | translate }}
+        </small>
+        <small *ngIf="gameForm.controls['key'].errors?.['pattern'] && gameForm.controls['key'].touched"
+          class="text-danger">
+          {{ 'Labels.Game.Errors.Use allowed symbols: a-z, 0-9 or -' | translate }}
+        </small>
+      </div>
+
+      <div class="form-group mb-4">
+        <textarea name="description" id="description" class="form-control" formControlName="description"
+          placeholder="{{ 'Labels.Game.Description' | translate }}"
+          [class.is-invalid]="gameForm.controls['description'].invalid && gameForm.controls['description'].touched">
+        </textarea>
+        <small *ngIf="gameForm.controls['description'].errors?.['required'] && gameForm.controls['description'].touched"
+          class="text-danger">
+          {{ 'Labels.Game.Errors.Description is required' | translate }}
+        </small>
+      </div>
+      <div>
+        <div class="form-group mb-4">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm" formControlName="publisher">
+            <option [ngValue]='null'> {{'Labels.Publisher.Select publisher' | translate}} </option>
+            <option *ngFor="let publisher of publishers" [ngValue]="publisher">{{publisher.companyName}}</option>
+          </select>
+        </div>
+        <div class="form-group mb-4">
+          <ng-multiselect-dropdown placeholder="{{'Labels.Genre.Select genres' | translate}}" [data]="genres" formControlName="genres"
+            [settings]="dropdownGenresSettings" class="multiselect-full-size">
+          </ng-multiselect-dropdown>
+        </div>
+        <div class="form-group mb-4">
+          <ng-multiselect-dropdown placeholder="{{'Labels.Platform.Select platforms' | translate}}" [data]="platforms" formControlName="platformTypes"
+            [settings]="dropdownPlatformsSettings" class="multiselect-full-size">
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="my-3">
+      <p class="text-secondary text-center">{{ 'Labels.Game.Game store info' | translate}}</p>
+
+      <div class="input-group mb-3">
+        <label for="price" class="fw-light m-2">{{ 'Labels.Game.Price' | translate }}</label>
+
+        <span class="input-group-text">$</span>
+        <input type="number" name="price" id="price" class="form-control" formControlName="price"
+          [class.is-invalid]="gameForm.controls['price'].invalid && gameForm.controls['price'].touched" 
+          placeholder="0.00"/>
+
+        <label for="discount" class="fw-light m-2">{{ 'Labels.Game.Discount' | translate }}</label>
+        <input type="number" name="discount" id="discount" class="form-control" formControlName="discount"
+          [class.is-invalid]="gameForm.controls['discount'].invalid && gameForm.controls['discount'].touched" 
+          placeholder="0"/>
+        <span class="input-group-text">%</span>
+
+        <label for="unitsInStock" class="fw-light m-2">{{ 'Labels.Game.Units in stock' | translate }}</label>
+        <input type="number" name="unitsInStock" id="unitsInStock" class="form-control"
+          [class.is-invalid]="gameForm.controls['unitsInStock'].invalid && gameForm.controls['unitsInStock'].touched"
+          formControlName="unitsInStock" placeholder="0"/>
+      </div>
+
+      <div class="d-flex justify-content-center form-check mb-2">
+        <input type="checkbox" name="discontinued" class="form-check-input me-2" id="discontinued"
+          formControlName="discontinued" />
+        <label for="discontinued" class="fw-light form-check-label">{{'Labels.Game.Discontinued' | translate }}</label>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" (click)="createGame()" class="btn btn-success m-3">{{ 'Labels.Submit' | translate }}</button>
+      </div>
+
+    </div>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center">
+  <div class="mx-5 my-3">
+  <tree-root #tree [nodes]="genres" [options]="options">
+    <ng-template  #treeNodeTemplate let-node let-index="index">
+      <div>
+        <button class = "btn text-warning" (click)="editGenre(node.data.id)"><fa-icon [icon]="faPencil"></fa-icon></button>
+        <button class = "btn text-danger" (click)="deleteGenre(node.data.id)"><fa-icon [icon]="faTrash"></fa-icon></button>
+        <span class="fw-bold">{{ node.data.name }}</span>
+      </div>
+    </ng-template>
+  </tree-root>
+</div>
+</div>

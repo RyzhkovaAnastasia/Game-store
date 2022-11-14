@@ -1,0 +1,11 @@
+
+  <div class="modal-header">
+      <h4 class="modal-title">{{'Labels.Delete' | translate}}</h4>
+  </div>
+  <div class="modal-body">
+      {{'Labels.Are you sure want to delete?'|translate}}
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="onConfirm()">{{'Labels.Delete'|translate}}</button>
+      <button type="button" class="btn btn-secondary" (click)="_bsModalRef?.hide()">{{'Labels.Cancel'|translate}}</button>        
+  </div>

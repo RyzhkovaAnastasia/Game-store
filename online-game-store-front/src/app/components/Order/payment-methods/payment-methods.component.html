@@ -1,0 +1,17 @@
+<div>
+  <h4 class="text-center">{{'Labels.Order.Payment.Please, choose payment method below' | translate}}</h4>
+  <div class="d-flex justify-content-center" *ngIf="paymentMethods.length > 0">
+    <div class="card m-3 text-center" *ngFor="let payment of paymentMethods">
+      <div class="card-header">
+        <img [src]="imgSrc.get(payment.id)" style="width: 30px"  [alt]="payment.title"/>
+        {{payment.title}}
+      </div>
+      <div class="card-body">
+        {{payment.description}}
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-outline-primary" (click)="pay(payment.title)">{{'Labels.Order.Payment.Pay'|translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>

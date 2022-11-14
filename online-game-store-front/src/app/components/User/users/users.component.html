@@ -1,0 +1,26 @@
+<div *ngIf="users.length > 0" class="d-flex justify-content-center m-5">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">{{ 'Labels.Auth.Username' | translate }}</th>
+        <th scope="col">{{ 'Labels.Auth.Email' | translate }}</th>
+        <th scope="col">{{ 'Labels.Auth.Role' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.role}}</td>
+        <td *ngIf="user.username">
+          <button class="btn text-warning" (click)="editUser(user.username)">
+            <fa-icon [icon]="faPencil"></fa-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="users.length <= 0" class="d-flex justify-content-center m-5">
+  <p>No users here</p>
+</div>

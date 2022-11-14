@@ -1,0 +1,33 @@
+<div class="m-3 d-flex justify-content-center">
+    <div class="form-group d-flex">
+        <label class="text-center" for="datepicker"> {{'Labels.Order.Select date' | translate }} </label>
+        <input class="form-control ms-3" name = "datepicker" ngxDaterangepickerMd [(ngModel)]="selectedDateRange"/>
+        <button class="btn btn-success mx-2" (click)="getAll(true)"> {{ 'Labels.Search' | translate }} </button>
+        <button class="btn btn-secondary mx-2"(click)="getAll(false)"> {{ 'Labels.Reset' | translate }} </button>
+    </div>
+</div>
+<div class="m-3 d-flex justify-content-center">
+   
+    <ul class="col-md-8 list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let order of orders">
+            <div class="ms-3">
+                <p class="fs-5 fw-bold">{{'Labels.Order.Order(n)' | translate }} #{{order.id | uppercase}} - {{order.orderState}}
+                    <button class="btn text-warning"(click)="editOrder(order.id)">
+                        <fa-icon [icon]="faPencil"></fa-icon>
+                    </button>
+                </p>
+                <p class="text-secondary"> {{order.orderDate}} </p>
+                <div class="text-secondary my-1" *ngIf="order.shipName">
+                    <p>{{ order.shipName }} </p>
+                    <span *ngIf="order.shipCountry !== null && order.shipCountry !== ''">{{ order.shipCountry }}, </span> 
+                    <span *ngIf="order.shipRegion !== null && order.shipRegion !== ''">{{order.shipRegion}}, </span> 
+                    <span *ngIf="order.shipCity !== null && order.shipCity !== ''">{{order.shipCity}}, </span> 
+                    <span *ngIf="order.shipPostalCode !== null && order.shipPostalCode !== ''">{{order.shipPostalCode}}, </span> 
+                    <span *ngIf="order.shipAddress !== null && order.shipAddress !== ''">{{order.shipAddress}}</span> 
+                </div>
+                <p class="text-primary">{{ getTotalSumOfOrder(order.id) }}$</p>
+               
+            </div>
+        </li>
+    </ul>
+</div>

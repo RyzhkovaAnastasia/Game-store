@@ -1,0 +1,220 @@
+{
+  "Labels": {
+    "Language":{
+      "Choose interface language": "Обрати мову інтерфейсу",
+      "English": "Англійська",
+      "Russian": "Російська",
+      "Ukrainian": "Українська"
+    },
+    "Auth": {
+      "Hi": "Вітаю",
+      "Email": "Електронна пошта",
+      "Password": "Пароль",
+      "Role": "Роль",
+      "Login": "Увійти",
+      "Sign In": "Увійти",
+      "Sign Up": "Реєстрація",
+      "Sign Out": "Вихід",
+      "Username": "Ім'я користувача",
+      "Create account": "Створити аккаунт",
+      "Don't have an account?": "Не маєте аккаунт?",
+      "Already have an account?": "Вже маєте аккаунт?",
+      "Sign in later, enter Game Store": "Увійти пізніше, зайти у Game Store",
+      "Sign up later, enter Game Store": "Зареєструватись пізніше, зайти у Game Store",
+      "Errors": {
+        "Email is required": "Електронна пошта обов'язкова",
+        "Email is invalid": "Не правильна електронна пошта",
+        "Email already exists": "Електронна пошта вже зареєстрована",
+        "Password must contain at least one number, one letter, one symbol and be 6 characters long": "У паролі має бути хоча б одна цифра, одна буква, один символ та бути 6 або більше символів",
+        "Password is required": "Пароль обов'язковий",
+        "Username is required": "Ім'я обов'язкове"
+      }
+    },
+    "Game": {
+      "Game": "Ігра",
+      "Games": "Ігри",
+      "Game info": "Інформація про гру",
+      "Game store info": "Інформація для магазину про гру",
+      "Create new game": "Створити нову ігру",
+      "Edit game": "Редагувати ігру",
+      "Name": "Назва",
+      "Price": "Ціна",
+      "Discount": "Знижка",
+      "Description": "Опис",
+      "Quantity": "Кількість",
+      "Published": "Опубліковано",
+      "Discontinued": "Знято з виробництва",
+      "Go to comments": "Перейти до коментарів",
+      "Download": "Завантажити",
+      "Units in stock": "Кількість",
+      "No games in stock": "Ігор наразі немає",
+      "Filter": {
+        "Sort by": "Сортувати по",
+        "Most popular": "Популярності",
+        "Most commented": "Комментуємості",
+        "Price": "Ціні",
+        "New added": "Доданості"
+      },
+      "Errors":{
+        "Name is required": "Назва обов'язкова",
+        "Key is required": "Пошуковий ключ обов'язковий",
+        "Description is required":"Опис обов'язковий"
+      }
+
+    },
+    "Comment": {
+      "Comment": "Коментар",
+      "Comments": "Коментарі",
+      "Reply": "Відповісти",
+      "Quote": "Цитувати",
+      "Delete": "Видалити",
+      "Ban": "Заблокувати",
+      "Create new comment": "Створити новий коментар",
+      "Edit comment": "Редагувати коментар",
+      "Comment was deleted": "Коментар видалено",
+      "Author name": "Ім'я автора",
+      "Errors": {
+        "Author name is required": "Ім'я автора обов'язкове",
+        "Comment is required": "Коментар обов'язковий"
+      }
+    },
+    "Genre": {
+      "Genre": "Жанр",
+      "Genres": "Жанри",
+      "Create new genre": "Створити новий жанр",
+      "Edit genre": "Редагувати жанр",
+      "Select parent genre": "Обрати батьківський жанр",
+      "Select genres": "Обрати жанри",
+      "Name": "Назва",
+      "Other": "Інші",
+      "Errors": {
+        "Name is required": "Назва обов'язкова"
+      }
+    },
+    "Publisher": {
+      "Publishers": "Видавники",
+      "Publisher": "Видавник",
+      "Create new publisher": "Створити видавника",
+      "Edit publisher": "Редагувати відавника",
+      "Select publisher": "Обрати відавника",
+      "Company name": "Назва компанії",
+      "Home page": "Домашня сторінка",
+      "Description": "Опис",
+      "Unknown": "Невідомо",
+      "Errors": {
+        "Company name is required": "Назва компанії обов'язковa",
+        "Home page is required": "Домашня сторінка обов'язкова",
+        "Description is required": "Опис обов'язковий"
+      }
+    },
+    "Platform": {
+      "Platform": "Платформа",
+      "Platform type": "Тип платформи",
+      "Platforms": "Платформи",
+      "Create new platform": "Створити нову платформу",
+      "Edit platform": "Редагувати платформу",
+      "Platform name": "Назва платформи",
+      "Select platforms": "Обрати платформи",
+      "Errors": {
+        "Type is required": "Назва платформи обов'язковa"
+      }
+    },
+    "Order": {
+      "Edit order": "Редагувати замовлення",
+      "Select Order State": "Обрати статус замовлення",
+      "Select date": "Обрати дату",
+      "Orders": "Замовлення",
+      "Order": "Замовити",
+      "Order(n)": "Замовлення",
+      "Add to basket": "Додати в кошик",
+      "Total amount": "Сума",
+      "Orders history": "Історія",
+      "Your basket is empty": "Кошик порожній",
+      "Basket": "Кошик",
+      "Delivery": {
+        "Enter shipper info": "Введіть інформацію доставки",
+        "Name": "Ім'я",
+        "Country": "Країна",
+        "Region": "Регіон",
+        "City": "Місто",
+        "Postal code": "Поштовий індекс",
+        "Address": "Адреса"
+      },
+      "Payment": {
+        "Please, choose payment method below": "Будь ласка, оберіть метод оплати нижче",
+        "Pay": "Заплатити",
+        "Visa":{
+          "Name": "Ім'я",
+          "Card number": "Номер картки",
+          "Expire date": "Дата закінчення картки",
+          "Errors":{
+            "Name is required": "Ім'я обов'язкове",
+            "CVV2 is required": "CVV2 обов'язкове",
+            "CVV2 must have 3 symbols": "CVV2 має бути з трьох символів",
+            "Card number is required": "Номер картки обов'язковий",
+            "Card number must be visa format": "Номер картки має бути формату visa",
+            "Date is required": "Дата закінчення картки обов'язкова",
+            "Date must have format **/****": "Дата закінчення картки має бути у форматі **/****",
+            "Card is outdated": "Строк картки вийшов"
+          }
+        },
+        "IBox":{
+          "Account number": "Номер аккаунту",
+          "Invoice number": "Номер накладної",
+          "Errors":{
+            "Account number is required": "Номер аккаунту обов'язковий",
+            "Invoice number is required": "Номер наклідної обов'язковий"
+          }
+        }
+      }
+    },
+    "Shipper": {
+      "Shippers": "Перевозчики"
+    },
+    "User": {
+      "Users": "Користувачі",
+      "Edit user": "Редагувати користувача",
+      "Edit profile": "Редагувати профіль",
+      "Ban user": "Заблокувати користувача",
+      "Settings": "Налаштування",
+      "Select ban duration": "Обрати час блокування"
+    },
+    "Role": {
+      "Roles": "Ролі",
+      "Select role": "Обрати роль"
+    },
+    "Submit": "Підтвердити",
+    "Search": "Пошук",
+    "Filter": "Відфільтрувати",
+    "Reset": "Очистити",
+    "Delete": "Видалити",
+    "Are you sure want to delete?": "Ви дійсно хочете видалити?",
+    "Cancel": "Відмінити",
+    "All": "Усі",
+    "Items per page": "Кількість на сторінці",
+    
+    "BanDuration":{
+      "One day": "Один день",
+      "One week": "Один тиждень",
+      "One month": "Один місяць",
+      "Permanent": "Назавжди"
+    },
+    "OrderState":{
+      "Shipped": "Відправлено",
+      "Complete": "Отримано",
+      "Canceled": "Відмінено"
+    },
+    "Published": {
+      "All time": "За весь час",
+      "Last week": "За останній тиждень",
+      "Last month": "за останній місяць",
+      "Last year": "за останній рік",
+      "1 year": "рік",
+      "N years": "роки"
+    }
+  },
+  "Errors": {
+    "Error": "Помилка",
+    "You don't have enough permissions": "Ви не маєте достатньо прав"
+  }
+}

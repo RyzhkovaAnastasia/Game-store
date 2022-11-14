@@ -1,0 +1,10 @@
+<div class="m-3 d-flex justify-content-center">
+    <ul class="col-md-8 list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let shipper of shippers">
+        <div class="ms-3 d-flex justify-content-center">
+          <span class="fs-5 fw-bold">{{shipper.companyName| uppercase}}</span>
+        </div>
+        <p class="d-flex justify-content-center text-secondary">{{ shipper.phone }}</p>
+      </li>
+    </ul>
+  </div>

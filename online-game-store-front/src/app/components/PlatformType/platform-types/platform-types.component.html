@@ -1,0 +1,11 @@
+<div class="m-3 d-flex justify-content-center">
+  <ul class="col-md-8 list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let platform of platforms">
+      <div class="ms-3 d-flex justify-content-center">
+        <span class="fs-5 fw-bold">{{platform.type| uppercase}}</span>
+          <button class="btn text-warning" (click)="editPlatform(platform.id)"><fa-icon [icon]="faPencil">Edit</fa-icon></button>
+          <button class="btn text-danger" (click) = "deletePlatform(platform.id)"><fa-icon [icon]="faTrash">Delete</fa-icon></button>
+      </div>
+    </li>
+  </ul>
+</div>

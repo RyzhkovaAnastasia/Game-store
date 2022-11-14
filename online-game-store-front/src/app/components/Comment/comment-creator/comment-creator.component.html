@@ -1,0 +1,26 @@
+<div class="mx-auto w-50">
+  <p class="text-center fw-bold">{{ 'Labels.Comment.Create new comment' | translate }}</p>
+  <hr />
+
+  <form class="form" [formGroup]="commentForm">
+    <div class="form-group mb-3">
+      <input type="text" name="name" id="name" class="form-control" formControlName="name" placeholder= "{{'Labels.Comment.Author name' | translate}}"
+        [class.is-invalid]="commentForm.controls['name'].invalid && commentForm.controls['name'].touched" />
+      <small class="text-danger" *ngIf="commentForm.controls['name'].invalid && commentForm.controls['name'].touched">
+        {{ 'Labels.Comment.Errors.Author name is required' | translate }}
+      </small>
+    </div>
+
+    <div class="form-group mb-3">
+      <input type="text" name="body" id="body" class="form-control" formControlName="body" placeholder= "{{'Labels.Comment.Comment' | translate}}"
+        [class.is-invalid]="commentForm.controls['body'].invalid && commentForm.controls['body'].touched" />
+      <small class="text-danger" *ngIf="commentForm.controls['body'].invalid && commentForm.controls['body'].touched">
+        {{ 'Labels.Comment.Errors.Comment is required' | translate }}
+      </small>
+    </div>
+
+    <button type="submit" (click)="createComment()" class="btn btn-success ms-3">{{ 'Labels.Submit' | translate }}</button>
+  </form>
+
+
+</div>

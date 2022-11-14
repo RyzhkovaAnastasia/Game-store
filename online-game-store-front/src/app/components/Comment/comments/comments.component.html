@@ -1,0 +1,70 @@
+<div class="my-5">
+  <div>
+    <div class="mx-5 my-3">
+      <tree-root #tree [nodes]="comments" [options]="options">
+        <ng-template #treeNodeTemplate let-node let-index="index">
+          <div class="card me-2 mb-2" style="width: 50rem" [id]="node.data.id">
+
+            <div class="card-header">
+              {{node.data.name}}
+            </div>
+
+            <div class="card-body" *ngIf="node.data.parentCommentId === null">
+              {{node.data.body ?? 'Labels.Comment.Comment was deleted' | translate}}
+            </div>
+
+            <div class="card-body" *ngIf="node.data.parentCommentId !== null && node.data.isQuoted">
+              <a (click)="onAuthorClick(node.data.parentCommentId)">{{node.data.parentCommentName}}</a>,
+              <custom-quote class="text-primary fst-italic">"{{node.data.parentCommentBody ?? 'Labels.Comment.Comment was deleted' | translate}}"
+              </custom-quote> —
+              {{node.data.body ?? 'Labels.Comment.Comment was deleted' | translate}}
+            </div>
+
+            <div class="card-body" *ngIf="node.data.parentCommentId !== null && !node.data.isQuoted">
+              <a (click)="onAuthorClick(node.data.parentCommentId)">{{node.data.parentCommentName}}</a>,
+              {{node.data.body ?? 'Labels.Comment.Comment was deleted' | translate}}
+            </div>
+
+            <div class="card-footer accordion" id="collapseGroup{{node.data.id}}">
+              <div>
+                <button class="btn text-primary" title="{{ 'Labels.Comment.Reply' | translate}}" data-bs-toggle="collapse"
+                  [attr.data-bs-target]=" '#collapseReply' + node.data.id" aria-expanded="false"
+                  aria-controls="collapse" *ngIf="node.data.body !== null">
+                  <fa-icon [icon]="faReply"></fa-icon>
+                </button>
+
+                <button class="btn text-primary" title="{{ 'Labels.Comment.Quote' | translate}}" data-bs-toggle="collapse"
+                  [attr.data-bs-target]=" '#collapseQuote' + node.data.id" aria-expanded="false"
+                  aria-controls="collapse" type="button" *ngIf="node.data.body !== null">
+                  <fa-icon [icon]="faQuote"></fa-icon>
+                </button>
+
+                <button class="btn text-danger" title="{{ 'Labels.Comment.Delete' | translate}}" (click)="deleteComment(node.data.id)"
+                  *ngIf="node.data.body !== null && isInRole">
+                  <fa-icon [icon]="faDelete"></fa-icon>
+                </button>
+                <button class="btn text-danger" title="{{'Labels.User.Ban user' | translate}}" (click)="banUser()" *ngIf="isInRole">
+                  <fa-icon [icon]="faBan"></fa-icon>
+                </button>
+              </div>
+
+              <div class="accordion-group">
+                <app-comment-creator class="collapse" [attr.data-bs-parent]="'#collapseGroup' + node.data.id"
+                  id="collapseReply{{node.data.id}}" (updateCommentList)="getAll()" [isQuoted]="false"
+                  [parentCommentId]="node.data.id" [gameId]="gameId">
+                </app-comment-creator>
+
+                <app-comment-creator class="collapse" [attr.data-bs-parent]="'#collapseGroup' + node.data.id"
+                  id="collapseQuote{{node.data.id}}" (updateCommentList)="getAll()" [isQuoted]="true"
+                  [parentCommentId]="node.data.id" [gameId]="gameId">
+                </app-comment-creator>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </tree-root>
+    </div>
+  </div>
+  <app-comment-creator (updateCommentList)="getAll()" [isQuoted]="false" [parentCommentId]="null" [gameId]="gameId">
+  </app-comment-creator>
+</div>

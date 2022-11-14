@@ -1,0 +1,83 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-5">
+            <a class="nav-link active">GS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/games/">{{'Labels.Game.Games' | translate}} <span>({{gameNumber}})</span></a>
+           
+          </li>
+          <li *ngIf="isInRole">
+            <a class="nav-link text-success" role="button" routerLink="/games/new">+</a>
+          </li>
+
+          <li class="nav-item mx-1">
+            <a class="nav-link" routerLink="/publishers">{{'Labels.Publisher.Publishers' | translate}}</a>
+          </li>
+          <li *ngIf="isInRole">
+            <a class="nav-link text-success" role="button" routerLink="/publishers/new">+</a>
+          </li>
+
+          <li class="nav-item mx-1" *ngIf="isInRole">
+            <a class="nav-link" routerLink="/genres">{{'Labels.Genre.Genres' | translate}}</a>
+          </li>
+          <li *ngIf="isInRole">
+            <a class="nav-link text-success" role="button" routerLink="/genres/new">+</a>
+          </li>
+
+          <li class="nav-item mx-1" *ngIf="isInRole">
+            <a class="nav-link" routerLink="/platforms">{{'Labels.Platform.Platforms' | translate}}</a>
+          </li>
+          <li *ngIf="isInRole">
+            <a class="nav-link text-success" role="button" routerLink="/platforms/new">+</a>
+          </li>
+
+          <li class="nav-item mx-1" *ngIf="isInRole">
+            <a class="nav-link" routerLink="/orders">{{'Labels.Order.Orders' | translate}}</a>
+          </li>
+
+          <li class="nav-item mx-1" *ngIf="isInRole">
+            <a class="nav-link" routerLink="/orders/history">{{'Labels.Order.Orders history' | translate}}</a>
+          </li>
+
+          <li class="nav-item mx-1" *ngIf="isInRole">
+            <a class="nav-link" routerLink="/shippers">{{'Labels.Shipper.Shippers' | translate}}</a>
+          </li>
+
+          <li class="nav-item mx-1" *ngIf="isInAdminRole">
+            <a class="nav-link" routerLink="/users">{{'Labels.User.Users' | translate}}</a>
+          </li>
+        </ul>
+
+        <div class="d-flex nav-item">
+          <a class="nav-link" *ngIf="user.username !== null">
+            {{'Labels.Auth.Hi' | translate}}, {{user.username}}!
+          </a>
+        </div>
+        <div class="d-flex nav-item">
+        <a class="nav-link" role="button" routerLink="basket" title=" {{ 'Labels.Order.Basket' | translate }}">
+          <fa-icon [icon]="faBasket" class="btn btn-outline-primary"></fa-icon>
+        </a>
+      </div>
+      <div class="d-flex nav-item">
+          <a class="nav-link" routerLink="settings" *ngIf="user.role !== 'Guest'" title="{{'Labels.User.Settings' | translate}}">
+            <fa-icon [icon]="faSettings" class="btn btn-outline-secondary"></fa-icon>
+          </a>
+      </div>
+      <div class="d-flex me-5 nav-item">
+        
+        <a *ngIf="isSignIn" class="nav-link" role="button" title="{{'Labels.Auth.Sign Out' | translate }}" (click)="sign()">
+          <fa-icon [icon]="faDoor" class="btn btn-outline-danger"></fa-icon>
+        </a>
+        <a *ngIf="!isSignIn" class="nav-link" role="button" title="{{'Labels.Auth.Sign In' | translate }}" (click)="sign()">
+          <fa-icon [icon]="faDoor" class="btn btn-outline-primary"></fa-icon>
+        </a>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>

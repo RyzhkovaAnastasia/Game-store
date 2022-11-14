@@ -1,0 +1,220 @@
+{
+    "Labels": {
+      "Language":{
+        "Choose interface language": "Choose interface language",
+        "English": "English",
+        "Russian": "Russian",
+        "Ukrainian": "Ukrainian"
+      },
+      "Auth": {
+        "Hi": "Hi",
+        "Email": "Email",
+        "Password": "Password",
+        "Role": "Role",
+        "Login": "Login",
+        "Sign In": "Sign In",
+        "Sign Up": "Sign Up",
+        "Sign Out": "Sign Out",
+        "Username": "Username",
+        "Create account": "Create account",
+        "Don't have an account?": "Don't have an account?",
+        "Already have an account?": "Already have an account?",
+        "Sign in later, enter Game Store": "Sign in later, enter Game Store",
+        "Sign up later, enter Game Store": "Sign up later, enter Game Store",
+        "Errors": {
+          "Email is required": "Email is required",
+          "Email is invalid": "Email is invalid",
+          "Email already exists": "Email already exists",
+          "Password must contain at least one number, one letter, one symbol and be 6 characters long": "Password must contain at least one number, one letter, one symbol and be 6 characters long",
+          "Password is required": "Password is required",
+          "Username is required": "Username is required"
+        }
+      },
+      "Game": {
+        "Game": "Game",
+        "Games": "Games",
+        "Game info": "Game info",
+        "Game store info": "Game store info",
+        "Create new game": "Create new game",
+        "Edit game": "Edit game",
+        "Name": "Name",
+        "Price": "Price",
+        "Discount": "Discount",
+        "Description": "Description",
+        "Quantity": "Quantity",
+        "Published": "Published",
+        "Discontinued": "Discontinued",
+        "Go to comments": "Go to comments",
+        "Download": "Download",
+        "Units in stock": "Units in stock",
+        "No games in stock": "No games in stock",
+        "Filter": {
+          "Sort by": "Sort by",
+          "Most popular": "Most popular",
+          "Most commented": "Most commented",
+          "Price": "Price",
+          "New added": "New added"
+        },
+        "Errors":{
+          "Name is required": "Name is required",
+          "Key is required": "Key is required",
+          "Description is required": "Description is required"
+        }
+  
+      },
+      "Comment": {
+        "Comment": "Comment",
+        "Comments": "Comments",
+        "Reply": "Reply",
+        "Quote": "Quote",
+        "Delete": "Delete",
+        "Ban": "Ban",
+        "Create new comment": "Create new comment",
+        "Edit comment": "Edit comment",
+        "Comment was deleted": "Comment was deleted",
+        "Author name": "Author name",
+        "Errors": {
+          "Author name is required": "Author name is required",
+          "Comment is required": "Comment is required"
+        }
+      },
+      "Genre": {
+        "Genre": "Genre",
+        "Genres": "Genres",
+        "Create new genre": "Create new genre",
+        "Edit genre": "Edit genre",
+        "Select parent genre": "Select parent genre",
+        "Select genres": "Select genres",
+        "Name": "Name",
+        "Other": "Other",
+        "Errors": {
+          "Name is required": "Name is required"
+        }
+      },
+      "Publisher": {
+        "Publishers": "Publishers",
+        "Publisher": "Publisher",
+        "Create new publisher": "Create new publisher",
+        "Edit publisher": "Edit publisher",
+        "Select publisher": "Select publisher",
+        "Company name": "Company name",
+        "Home page": "Home page",
+        "Description": "Description",
+        "Unknown": "Unknown",
+        "Errors": {
+          "Company name is required": "Company name is required",
+          "Home page is required": "Home page is required",
+          "Description is required": "Description is required"
+        }
+      },
+      "Platform": {
+        "Platform": "Platform",
+        "Platform type": "Platform type",
+        "Platforms": "Platforms",
+        "Create new platform": "Create new platform",
+        "Edit platform": "Edit platform",
+        "Platform name": "Platform name",
+        "Select platforms": "Select platforms",
+        "Errors": {
+          "Type is required": "Type is required"
+        }
+      },
+      "Order": {
+        "Edit order": "Edit order",
+        "Select Order State": "Select Order State",
+        "Select date": "Select date",
+        "Orders": "Orders",
+        "Order": "Order",
+        "Order(n)": "Order",
+        "Add to basket": "Add to basket",
+        "Total amount": "Total amount",
+        "Orders history": "Orders history",
+        "Your basket is empty": "Your basket is empty",
+        "Basket": "Basket",
+        "Delivery": {
+          "Enter shipper info": "Enter shipper info",
+          "Name": "Name",
+          "Country": "Country",
+          "Region": "Region",
+          "City": "City",
+          "Postal code": "Postal code",
+          "Address": "Address"
+        },
+        "Payment": {
+          "Please, choose payment method below": "Please, choose payment method below",
+          "Pay": "Pay",
+          "Visa":{
+            "Name": "Name",
+            "Card number": "Card number",
+            "Expire date": "Expire date",
+            "Errors":{
+              "Name is required": "Name is required",
+              "CVV2 is required": "CVV2 is required",
+              "CVV2 must have 3 symbols": "CVV2 must have 3 symbols",
+              "Card number is required": "Card number is required",
+              "Card number must be visa format": "Card number must be visa format",
+              "Date is required": "Date is required",
+              "Date must have format **/****": "Date must have format **/****",
+              "Card is outdated": "Card is outdated"
+            }
+          },
+          "IBox":{
+            "Account number": "Account number",
+            "Invoice number": "Invoice number",
+            "Errors":{
+              "Account number is required": "Account number is required",
+              "Invoice number is required": "Invoice number is required"
+            }
+          }
+        }
+      },
+      "Shipper": {
+        "Shippers": "Shippers"
+      },
+      "User": {
+        "Users": "Users",
+        "Edit user": "Edit user",
+        "Edit profile": "Edit profile",
+        "Ban user": "Ban user",
+        "Settings": "Settings",
+        "Select ban duration": "Select ban duration"
+      },
+      "Role": {
+        "Roles": "Roles",
+        "Select role": "Select role"
+      },
+      "Submit": "Submit",
+      "Search": "Search",
+      "Filter": "Filter",
+      "Reset": "Reset",
+      "Delete": "Delete",
+      "Are you sure want to delete?": "Are you sure want to delete?",
+      "Cancel": "Cancel",
+      "All": "All",
+      "Items per page": "Items per page",
+      
+      "BanDuration":{
+        "One day": "One day",
+        "One week": "One week",
+        "One month": "One month",
+        "Permanent": "Permanent"
+      },
+      "OrderState":{
+        "Shipped": "Shipped",
+        "Complete": "Complete",
+        "Canceled": "Canceled"
+      },
+      "Published": {
+        "All time": "All time",
+        "Last week": "Last week",
+        "Last month": "Last month",
+        "Last year": "Last year",
+        "1 year": "1 year",
+        "N years": "N years"
+      }
+    },
+    "Errors": {
+      "Error": "Error",
+      "You don't have enough permissions": "You don't have enough permissions"
+    }
+  }
